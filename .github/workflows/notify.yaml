@@ -9,6 +9,8 @@ on:
         type: 'string'
 
 jobs:
+  simple-echo:
+    - run: echo "got in here"
   notify-on-success:
     runs-on: ubuntu-latest
     if: ${{ inputs.tag == 'latest' && github.event.workflow_run.conclusion == 'success' }}
