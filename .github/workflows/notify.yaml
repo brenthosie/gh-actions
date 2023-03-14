@@ -13,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ inputs.tag == 'latest' && github.event.workflow_run.conclusion == 'success' }}
     steps:
-      - echo "tag was $inputs.tag"
+      - run: echo "tag was $inputs.tag"

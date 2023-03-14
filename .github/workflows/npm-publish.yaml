@@ -24,7 +24,7 @@ jobs:
         run: |
           echo 'Only the tags "latest" or "next" are supported. You entered "${{ github.event.inputs.tag }}"'
           exit 1
-      - echo "published to npm"
+      - run: echo "published to npm"
 
   ci-notify:
     needs: publish-npm
